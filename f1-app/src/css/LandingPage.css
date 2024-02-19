@@ -1,0 +1,85 @@
+
+.Landing-container {
+    font-family: 'Lexend', sans-serif;
+}
+
+.image-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/mercedes_amg_petronas_f1_car_4k.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 200px; /* Adjust the distance from the bottom based on your design */
+    left: 28%;
+}
+
+.logo-container {
+    width: 100px;
+    background: linear-gradient(50deg, black, rgba(31, 31, 31));
+    border-radius: 2cqb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hybrid {
+    margin-bottom: -15px;
+    color: white;
+    font-size: 21px;
+}
+
+.data {
+    margin-top: -20px;
+    color: white;
+    font-size: 30px;
+}
+
+h3 {
+    margin-left: -5px;
+}
+
+.f1-title {
+    font-weight: bold;
+    font-size: 70px;
+    color: red;
+}
+
+.one {
+    color: white;
+    margin-left: -28px;
+}
+
+.historical {
+    font-size: 16px;
+    color: white;
+}
+
+.enter-button {
+    background-color: red;
+    width: 182px;
+    padding: 5px;
+    color: white;
+    border-radius: 2cqb;
+    border-width: 0;
+}
+
+.enter-button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.815);
+}
+
+@media screen and (max-width: 800px) {
+    .Landing-container {
+        margin-left: -50px;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 215px; /* Adjust the distance from the bottom based on your design */
+        left: 8%;
+    }
+}

@@ -1,0 +1,87 @@
+.races-container {
+    font-family: 'Lexend', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    overflow: overlay;
+    height: 100vh;
+  }
+  
+  
+  .race-history-heading {
+    display: flex;
+    justify-content: left;
+    padding-top: 7px;
+    padding-left: 10px;
+    background-color: rgb(21, 21, 21);
+  }
+  
+  .select-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .race-list-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .race-box-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+      width: 360px;
+      height: 250px;
+      text-align: center;
+      border: 0px black solid;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      border-radius: 5cqb;
+      padding: 0;
+      margin: 20px;
+      text-decoration: none;
+  }
+
+  .race-box-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 2.1);
+  }
+  
+  .race-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .race-link:hover {
+    color: inherit;
+  }
+
+  .race-name {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .race-info {
+    font-size: 15px;
+    margin: 2px;
+    font-weight: 200;
+  }
+
+  .race-img-container {
+    padding: 10px;
+  }
+
+  .race-img {
+    padding-top: 1px;
+    width: 120px;
+    height: 70px;
+    border-radius: 1cqb;
+  }
+
+  select {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    max-height: 30px;
+    border-radius: 1cqb;
+}

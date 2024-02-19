@@ -1,0 +1,59 @@
+.main-container {
+    font-family: 'Lexend', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    height: 100vh;
+}
+
+.home-container {
+    display: flex;
+    font-family: 'Lexend', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgb(17, 17, 17);
+}
+
+
+.component-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+    width: 300px;
+    height: 200px;
+    border: 0px black solid;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 5cqb;
+    padding: 5px;
+    margin: 20px;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+}
+
+.component-container img {
+    padding: 15px;
+}
+
+.component-container h3 {
+    font-size: 18px;
+    color: white;
+    padding: 2px;
+    font-weight: 200;
+}
+
+.component-container h3:hover {
+    font-weight: 400;
+}
+
+.comp-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}

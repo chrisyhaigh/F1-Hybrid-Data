@@ -1,0 +1,72 @@
+.standings-container {
+    font-family: 'Lexend', sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    height: 100vh;
+    overflow: auto;
+}
+
+.standings-heading {
+    display: flex;
+    justify-content: left;
+    padding-top: 7px;
+    padding-left: 10px;
+    background-color: rgb(21, 21, 21);
+}
+
+.standings-select-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    margin-bottom: -10px;
+    font-weight: 400;
+}
+
+.standings-table-container {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    border-top: 0px black solid;
+    border-bottom: none;
+    padding: 15px;
+    border-radius: 2cqb;
+    padding: 5px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.drivers-table {
+    color: white;
+    margin: 10px;
+}
+
+.driver-table-head {
+    letter-spacing: 1px;
+}
+
+.drivers-table-body {
+    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+}
+
+.position {
+    text-align: center;
+    width: 5px;
+    border-right: solid 0.1px;
+    border-left: solid 0.1px;
+}
+
+.constructor {
+    border-right: solid 0.1px;
+    border-left: solid 0.1px;
+}
+
+.wins {
+    border-right: solid 1px;
+}
+
+select {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    max-height: 30px;
+    border-radius: 1cqb;
+}

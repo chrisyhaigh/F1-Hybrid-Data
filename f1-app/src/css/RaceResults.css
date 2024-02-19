@@ -1,0 +1,66 @@
+.race-results-container {
+    font-family: 'Lexend', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    height: 100vh;
+    overflow: auto;
+}
+
+.race-results-heading-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-left: 14px;
+    background-color: rgb(21, 21, 21);
+}
+
+.race-results-table-container {
+
+    padding: 15px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.line {
+    background-color: white;
+    width: 100%;
+    height: 2px;
+}
+
+.race-flag {
+    width: 50px;
+    height: 31px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    border-radius: 0.5cqb;
+}
+
+.race-results-table-body {
+    font-weight: 300;
+    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+}
+
+.position {
+    text-align: center;
+    width: 1px;
+    border-right: solid 0.px;
+    border-left: solid 0.1px;
+}
+
+.race-grid {
+    border-right: solid 0.1px;
+    border-left: solid 0.1px;
+}
+
+.laps, .grid {
+    width: 1px;
+}
+
+.status {
+    width: 120px;
+}
+
