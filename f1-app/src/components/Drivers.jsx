@@ -234,7 +234,7 @@ function Drivers() {
             <div className="drivers-profile-container">
                 {driverData && driverData.map(driver => (
                     <Link
-                        to={`/driverresults?season=${selectedSeason}&driver=${encodeURIComponent(driver.givenName === 'Max' ? 'max_verstappen' : driver.familyName === 'de Vries' ? 'de_vries' : driver.familyName)}`}
+                    to={`/driverresults?season=${selectedSeason}&driver=${encodeURIComponent(driver.givenName === 'Max' ? 'max_verstappen' : driver.familyName === 'de Vries' ? 'de_vries' : driver.familyName === 'Magnussen' ? 'kevin_magnussen' : driver.familyName)}`}
                         key={driver.driverId}
                         className="driver-link"
                         >

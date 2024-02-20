@@ -125,6 +125,12 @@ function Teams() {
                             constructor.name === 'Alpine F1 Team' ? 'alpine' :
                             constructor.name === 'Alfa Romeo' ? 'alfa' :
                             constructor.name === 'Manor Marussia' ? 'manor' :
+                            constructor.name === 'Red Bull' ? 'Red_Bull' :
+                            constructor.name === 'Aston Martin' ? 'Aston_Martin' :
+                            constructor.name === 'Force India' ? 'Force_India' :
+                            constructor.name === 'Lotus F1' ? 'Lotus_F1' :
+                            constructor.name === 'Toro Rosso' ? 'Toro_Rosso' :
+                            constructor.name === 'Racing Point' ? 'Racing_Point' :
                             constructor.name.includes('F1 Team') ? constructor.name.replace(/\s/g, "_") : 
                             constructor.name
                         )}`} 
