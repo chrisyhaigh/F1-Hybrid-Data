@@ -8,7 +8,6 @@ const LandingPage = ({ onEnterClick }) => {
             </div>
             <div className='button-container'>
                 <div className="logo-container">
-                    <h6 className="hybrid">HYBRID</h6>
                     <h3 className="f1-title">F <span className="one">1</span></h3>
                     <h6 className="data">DATA</h6>
                 </div>

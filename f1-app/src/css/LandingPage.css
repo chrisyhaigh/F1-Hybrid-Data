@@ -13,29 +13,29 @@
 
 .button-container {
     position: absolute;
-    bottom: 200px; /* Adjust the distance from the bottom based on your design */
+    bottom: 200px;
     left: 28%;
+    top: 25%;
 }
 
 .logo-container {
-    width: 100px;
+    width: 90px;
     background: linear-gradient(50deg, black, rgba(31, 31, 31));
-    border-radius: 2cqb;
+    border-radius: 1cqb;
+    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.hybrid {
-    margin-bottom: -15px;
-    color: white;
-    font-size: 21px;
+    margin-bottom: 10px;
 }
 
 .data {
-    margin-top: -20px;
+    font-family: "Teko", sans-serif;
+    margin-top: -38px;
     color: white;
-    font-size: 30px;
+    font-size: 36px;
+    letter-spacing: 1.4px;
+    font-weight: lighter;
 }
 
 h3 {
@@ -43,28 +43,36 @@ h3 {
 }
 
 .f1-title {
+    font-family: "Teko", sans-serif;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 90px;
     color: red;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .one {
     color: white;
-    margin-left: -28px;
+    margin-left: -10px
 }
 
-.historical {
-    font-size: 16px;
-    color: white;
+.sub-title {
+    font-weight: lighter;
+    font-size: 23.7px;
 }
 
 .enter-button {
+    font-family: "Teko", sans-serif;
     background-color: red;
-    width: 182px;
-    padding: 5px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    width: 250px;
+    padding: 1px;
     color: white;
-    border-radius: 2cqb;
-    border-width: 0;
+    border-radius: 1cqb;
+    border: none;
 }
 
 .enter-button:hover {
@@ -72,14 +80,71 @@ h3 {
     background-color: rgba(255, 0, 0, 0.815);
 }
 
-@media screen and (max-width: 800px) {
-    .Landing-container {
-        margin-left: -50px;
+@media screen and (max-width: 1350px) {
+    .button-container {
+        left: 27%;
+        top: 40%;
     }
 
+    
+}
+
+@media screen and (max-width: 1040px) {
     .button-container {
-        position: absolute;
-        bottom: 215px; /* Adjust the distance from the bottom based on your design */
-        left: 8%;
+        left: 22%;
+        top: 57%;
+    }
+
+    .sub-title {
+        font-weight: lighter;
+        font-size: 27.7px;
+    }
+
+    .enter-button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button-container {
+        left: 20%;
+        top: 42%;
+    }
+
+    .sub-title {
+        font-weight: lighter;
+        font-size: 24.7px;
+    }
+
+    .enter-button {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 830px) {
+    .button-container {
+        left: 20%;
+        top: 50%;
+    }
+
+    .enter-button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .button-container {
+        left: 10%;
+        top: 58%;
+    }
+
+    .sub-title {
+        font-weight: lighter;
+        font-size: 18.7px;
+    }
+
+    .enter-button {
+        width: 100%;
     }
 }
