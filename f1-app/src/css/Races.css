@@ -67,9 +67,6 @@
     font-weight: 200;
   }
 
-  .race-img-container {
-  }
-
   .race-img {
     padding-top: 1px;
     width: 80px;
@@ -97,11 +94,7 @@
     .race-info {
       font-size: 10px;
     }
-
-    .race-img-container {
-
-    }
-
+    
     .race-img {
       width: 80px;
       height: 40px;
