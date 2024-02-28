@@ -6,7 +6,7 @@
 .image-container {
     position: relative;
     height: 100vh;
-    background-image: url('../images/mercedes_amg_petronas_f1_car_4k.jpg');
+    background-image: url('../images/mercedes-track-wet.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -14,19 +14,23 @@
 .button-container {
     position: absolute;
     bottom: 200px;
-    left: 28%;
+    left: 34%;
     top: 25%;
 }
 
 .logo-container {
     width: 90px;
-    background: linear-gradient(50deg, black, rgba(31, 31, 31));
+    background: linear-gradient(135deg, black, rgba(31, 31, 31), black);
     border-radius: 1cqb;
     padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+}
+
+h3 {
+    margin-left: -5px;
 }
 
 .data {
@@ -38,9 +42,6 @@
     font-weight: lighter;
 }
 
-h3 {
-    margin-left: -5px;
-}
 
 .f1-title {
     font-family: "Teko", sans-serif;
@@ -59,8 +60,10 @@ h3 {
 }
 
 .sub-title {
-    font-weight: lighter;
-    font-size: 23.7px;
+    font-weight: 400;
+    font-size: 24.7px;
+    font-family: "Teko", sans-serif;
+    letter-spacing: 1px;
 }
 
 .enter-button {
@@ -108,12 +111,12 @@ h3 {
 @media screen and (max-width: 1024px) {
     .button-container {
         left: 20%;
-        top: 42%;
+        top: 32%;
     }
 
     .sub-title {
         font-weight: lighter;
-        font-size: 24.7px;
+        font-size: 22.7px;
     }
 
     .enter-button {
@@ -123,17 +126,30 @@ h3 {
 
 
 @media screen and (max-width: 830px) {
+    .image-container {
+        background-position: 62% center;
+    }
+
     .button-container {
-        left: 20%;
+        left: 8%;
         top: 50%;
     }
 
+    .sub-title {
+        font-weight: lighter;
+        font-size: 23.7px;
+    }
+
     .enter-button {
-        width: 100%;
+        width: 105%;
     }
 }
 
 @media screen and (max-width: 430px) {
+    .image-container {
+        background-position: 60% center;
+    }
+
     .button-container {
         left: 10%;
         top: 58%;
@@ -145,6 +161,7 @@ h3 {
     }
 
     .enter-button {
-        width: 100%;
+        width: 105%;
     }
 }
+

@@ -18,7 +18,7 @@
 .drivers-select-container {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 18px;
 }
 
 .select-font {
@@ -44,19 +44,19 @@
 }
 
 .driver-profile {
-    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+    background: linear-gradient(220deg, rgba(41, 41, 41), rgb(73, 31, 31));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: rgb(31, 31, 31);
     width: 260px;
-    height: 260px;
+    height: 210px;
     text-align: center;
     border: 0px black solid;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    border-radius: 5cqb;
-    padding: 20px;
+    border-radius: 2cqb;
+    padding: 0;
     margin: 15px;
     text-decoration: none;
 }
@@ -66,6 +66,7 @@
     width: 260px;
     background-color: white;
     height: 1px;
+    margin-bottom: 20px;
 }
 
 .driver-link {
@@ -96,4 +97,30 @@ select {
     color: white;
     max-height: 30px;
     border-radius: 1cqb;
+}
+
+@media screen and (max-width: 660px) {
+    .driver-profile {
+        width: 160px;
+        height: 150px;
+    }
+
+    .driver-line {
+        width: 160px;
+        background-color: white;
+        height: 1px;
+        margin-bottom: 15px;
+    }
+
+    .driver-image {
+        width: 75px;
+    }
+
+    .driver-name {
+        font-size: 14px;
+    }
+
+    .driver-info {
+        font-size: 7px;
+    }
 }

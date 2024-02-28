@@ -245,8 +245,6 @@ function Drivers() {
                             <div className="driver-line"></div>
                             <div className="driver-details">
                                 <p className="driver-name">{`${driver.givenName} ${driver.familyName}`}</p>
-                                <p className="driver-info">{`DOB: ${driver.dateOfBirth}`}</p>
-                                <p className="driver-info">{`Nationality: ${driver.nationality}`}</p>
                             </div>
                         </div>
                     </Link>

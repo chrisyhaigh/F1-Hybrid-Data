@@ -138,7 +138,7 @@ function Teams() {
                     >
                         <div className="team-profile">
                             <div className="team-image-container">
-                                <img src={getTeamLogos(constructor.name)} width='180' alt=""></img>
+                                <img className="team-logo" src={getTeamLogos(constructor.name)} width='160' alt=""></img>
                             </div>
                             <div className="team-details">
                             </div>

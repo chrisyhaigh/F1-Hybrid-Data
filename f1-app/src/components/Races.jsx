@@ -78,7 +78,7 @@ function Races() {
                   className="race-link">
               <div className="race-box-container">
                 <div className="round-container">
-                  <p className="race-info">Round {race.round}</p>
+                  <p className="race-round">Round {race.round}</p>
                 </div>
                 <div className="race-img-container">
                   {/* Display the flag using the flag URL */}
