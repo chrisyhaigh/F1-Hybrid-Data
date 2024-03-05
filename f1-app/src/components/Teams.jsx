@@ -107,7 +107,7 @@ function Teams() {
             </div>
             <div className="line"></div>
             <div className="team-select-container">
-                <p>Choose a season from the list to view the teams who participated in that specific season:</p>
+                <p className="select-font">Choose a season from the list to view the teams who participated in that specific season:</p>
                 <select onChange={(e) => setSelectedSeason(e.target.value)}>
                     <option value="">Season</option>
                     {years.map((year) => (

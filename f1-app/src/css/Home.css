@@ -93,3 +93,39 @@
         font-weight: 200;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .component-container {
+        width: 125px;
+        height: 125px;
+        margin: 10px;
+        margin-top: 25px;
+    }
+
+    .f1-helmet {
+        width: 106px;
+    }
+
+    .lotus {
+        width: 120px;
+    }
+
+    .trophy {
+        width: 80px;
+    }
+
+    .team-trophy {
+        width: 80px;
+    }
+
+    .cheq-flag {
+        width: 100px;
+    }
+    
+    .component-container h3 {
+        font-size: 14px;
+        color: white;
+        padding: 2px;
+        font-weight: 200;
+    }
+}

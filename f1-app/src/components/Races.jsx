@@ -61,7 +61,7 @@ function Races() {
         </div>
         <div className="line"></div>
         <div className="select-container">
-          <p>Choose a season from the select menu to display the race history for that particular year:</p>
+          <p className="select-font">Choose a season from the select menu to display the race history for that particular year:</p>
           <select onChange={(e) => setSelectedSeason(e.target.value)}>
             <option value="">Season</option>
             {years.map((year) => (

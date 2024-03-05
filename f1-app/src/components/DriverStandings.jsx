@@ -93,30 +93,30 @@ function DriverStandings() {
                 </select>
             </div>
             <div className="standings-table-container">
-                {standingsData && (
-                        <table className="table drivers-table">
-                            <thead className="driver-table-head">
-                                <tr>
-                                    <th className="text-center">Pos</th>
-                                    <th className="text-center">Driver</th>
-                                    <th className="text-center">Constructor</th>
-                                    <th className="text-center">Points</th>
-                                    <th className="text-center">Wins</th>
-                                </tr>
-                            </thead>
-                            <tbody className="drivers-table-body">
-                                {standingsData.map((driver, index) => (
-                                    <tr key={driver.Driver.driverId || index}>
-                                        <td className="position" style={{ backgroundColor: getPositionColor(driver.position) }}>{driver.position}</td>
-                                        <td>{driver.Driver.givenName} {driver.Driver.familyName}</td>
-                                        <td className="constructor text-white" style={{ background: `linear-gradient(200deg, ${getTeamColour(driver.Constructors[0].name)}, rgb(17, 17, 17) 60%)` }}>{driver.Constructors[0].name}</td>
-                                        <td className="points text-center">{driver.points}</td>
-                                        <td className="wins text-center">{driver.wins}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                )}
+            {standingsData && (
+                <table className="table drivers-table">
+                    <thead className="driver-table-head">
+                        <tr>
+                            <th scope="col" className="text-center">Pos</th>
+                            <th scope="col" colspan="2" className="text-left">Driver</th>
+                            <th scope="col" className="text-left">Constructor</th>
+                            <th scope="col" className="text-center">Points</th>
+                            <th scope="col" className="text-center">Wins</th>
+                        </tr>
+                    </thead>
+                    <tbody className="driver-table-body">
+                        {standingsData.map((driver, index) => (
+                            <tr scope="row" key={driver.Driver.driverId || index}>
+                                <td className="position" style={{ backgroundColor: getPositionColor(driver.position) }}>{driver.position}</td>
+                                <td colSpan="2">{driver.Driver.givenName} {driver.Driver.familyName}</td>
+                                <td className="constructor text-white" style={{ background: `linear-gradient(200deg, ${getTeamColour(driver.Constructors[0].name)}, rgb(17, 17, 17) 60%)` }}>{driver.Constructors[0].name}</td>
+                                <td className="points text-center">{driver.points}</td>
+                                <td className="wins text-center">{driver.wins}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
             </div>
         </div>
     );

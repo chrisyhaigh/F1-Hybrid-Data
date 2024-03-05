@@ -118,10 +118,10 @@ function DriverResults() {
                         <tr>
                             <th className='text-center'>Round</th>
                             <th className='text-left'>Race</th>
-                            <th className='text-center'>Pos</th>
                             <th className='text-center'>Grid</th>
-                            <th className='text-center'>Laps</th>
-                            <th className='text-center'>Status</th>
+                            <th className='text-center'>Pos</th>
+                            <th className='text-center laps'>Laps</th>
+                            <th className='text-center status'>Status</th>
                             <th className='text-center'>Points</th>
                         </tr>
                     </thead>
@@ -133,8 +133,8 @@ function DriverResults() {
                                 <td className='result-grid race text-left'>
                                     {result.raceName} <img src={raceFlag[resultIndex]} className="race-flag-result" alt="Flag" />
                                 </td>
-                                <td className='result-grid text-center position' style={{ backgroundColor: getPositionColor(result.position)} }>{result.position}</td>
                                 <td className='result-grid text-center grid'>{result.grid}</td>
+                                <td className='result-grid text-center position' style={{ backgroundColor: getPositionColor(result.position)} }>{result.position}</td>
                                 <td className='result-grid text-center laps'>{result.laps}</td>
                                 <td className='result-grid text-center status'>{result.status}</td>
                                 <td className='result-grid text-center points'>{result.points}</td>

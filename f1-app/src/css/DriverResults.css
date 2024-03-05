@@ -37,10 +37,6 @@
     padding: 10px;
 }
 
-.driver-results-table-body {
-    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
-}
-
 .result-grid {
     border-right: solid white 1px;
     font-weight: 300;
@@ -48,7 +44,7 @@
 }
 
 .round {
-    width: 5px;
+    width: 1px;
 }
 
 .line {
@@ -62,10 +58,77 @@
 }
 
 .race-flag-result {
-    width: 40px;
-    height: 25px;
+    width: 30px;
+    height: 20px;
     margin-left: 10px;
-    margin-bottom: 8px;
-    border-radius: 0.5cqb;
+    margin-bottom: 4px;
+    border-radius: 0.3cqb;
 }
 
+@media screen and (max-width: 820px) {
+    .driver-results-table {
+        font-size: 12px;
+    }
+
+    .race-flag-result {
+        width: 24px;
+        height: 16px;
+        margin-left: 10px;
+        margin-bottom: 2px;
+        border-radius: 0.3cqb;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .driver-results-table {
+        font-size: 12px;
+    }
+
+    .driver-results-heading {
+        font-size: 20px;
+    }
+
+    .race-flag-result {
+        width: 24px;
+        height: 16px;
+        margin-left: 10px;
+        margin-bottom: 2px;
+        border-radius: 0.3cqb;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .driver-results-table {
+        font-size: 10px;
+    }
+
+    .race-flag-result {
+        width: 20px;
+        height: 14px;
+        margin-left: 10px;
+        margin-bottom: 1px;
+        border-radius: 0.3cqb;
+    }
+
+    .status {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .driver-results-table {
+        font-size: 9px;
+    }
+
+    .race-flag-result {
+        width: 20px;
+        height: 12px;
+        margin-left: 10px;
+        margin-bottom: 1px;
+        border-radius: 0.3cqb;
+    }
+
+    .status {
+        display: none;
+    }
+}

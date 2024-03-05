@@ -97,7 +97,7 @@ function TeamStandings() {
                     <thead className="constructors-table-head">
                         <tr>
                             <th className="text-center">Pos</th>
-                            <th className="text-center">Team</th>
+                            <th className="text-left">Team</th>
                             <th className="text-center">Points</th>
                             <th className="text-center">Wins</th>
                         </tr>

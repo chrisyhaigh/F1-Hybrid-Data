@@ -18,7 +18,7 @@
 .drivers-select-container {
     display: flex;
     justify-content: space-around;
-    padding: 18px;
+    padding: 10px;
 }
 
 .select-font {
@@ -100,6 +100,14 @@ select {
 }
 
 @media screen and (max-width: 660px) {
+    .drivers-select-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 19px;
+        font-size: 12px;
+    }
+
+
     .driver-profile {
         width: 160px;
         height: 150px;
@@ -118,6 +126,40 @@ select {
 
     .driver-name {
         font-size: 14px;
+    }
+
+    .driver-info {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .drivers-select-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .driver-profile {
+        width: 130px;
+        height: 130px;
+        margin: 10px;
+    }
+
+    .driver-line {
+        width: 130px;
+        background-color: white;
+        height: 1px;
+        margin-bottom: 15px;
+    }
+
+    .driver-image {
+        width: 70px;
+    }
+
+    .driver-name {
+        font-size: 10px;
     }
 
     .driver-info {

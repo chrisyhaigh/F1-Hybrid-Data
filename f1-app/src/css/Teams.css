@@ -17,7 +17,11 @@
 .team-select-container {
     display: flex;
     justify-content: space-around;
-    padding: 13px;
+    padding: 10px;
+}
+
+.select-font {
+    font-weight: 300;
 }
 
 .team-profile-container {
@@ -56,6 +60,11 @@ select {
 }
 
 @media screen and (max-width: 920px) {
+    .team-select-container {
+        padding: 10px;
+        font-size: 12px;
+    }
+
     .team-profile {
         width: 160px;
         height: 120px;
@@ -65,5 +74,23 @@ select {
 
     .team-logo {
         width: 125px;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .team-select-container {
+        padding: 15px;
+        font-size: 1px;
+    }
+
+    .team-profile {
+        width: 130px;
+        height: 100px;
+        padding: 0;
+        margin: 10px;
+    }
+
+    .team-logo {
+        width: 105px;
     }
 }

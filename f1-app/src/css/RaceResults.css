@@ -9,20 +9,13 @@
 .race-results-heading-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 7px;
+    padding-top: 10px;
     padding-left: 14px;
     background-color: rgb(21, 21, 21);
 }
 
 .race-results-table-container {
-
     padding: 15px;
-}
-
-.select-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
 }
 
 .line {
@@ -39,15 +32,30 @@
     border-radius: 0.5cqb;
 }
 
+.back-button {
+    margin-right: 10px;
+    width: 50px;
+    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0.5cqb;
+    border-top: white solid 0.5px;
+    border-left: white solid 0.5px;
+}
+
+.race-results-table {
+    font-size: 16px;
+}
+
 .race-results-table-body {
     font-weight: 300;
-    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
 }
 
 .position {
     text-align: center;
     width: 1px;
-    border-right: solid 0.px;
+    border-right: solid 0px;
     border-left: solid 0.1px;
 }
 
@@ -61,6 +69,66 @@
 }
 
 .status {
-    width: 120px;
+    width: 150px;
 }
 
+@media screen and (max-width: 775px) {
+    .race-results-table {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .race-results-table {
+        font-size: 12px;
+    }
+
+    .status {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .race-results-heading {
+        font-size: 16px;
+    }
+
+    .race-flag {
+        width: 25px;
+        height: 15px;
+        margin-left: 5px;
+        margin-top: 1px;
+        margin-bottom: 4px;
+        border-radius: 0.2cqb;
+    }
+
+    .back-button {
+        margin-right: 10px;
+        width: 30px;
+        background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+        color: white;
+        font-weight: bold;
+        font-size: 10px;
+        border-top: white solid 0.5px;
+        border-left: white solid 0.5px;
+    }
+
+    .race-results-table {
+        font-size: 10px;
+    }
+
+    .status {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .race-results-table {
+        font-size: 10px;
+    }
+
+    .status, .laps {
+        display: none;
+    }
+}

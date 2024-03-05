@@ -26,31 +26,27 @@
     font-weight: 300;
     display: flex;
     justify-content: center;
-    border-top: 0px black solid;
-    border-bottom: none;
-    padding: 15px;
-    border-radius: 2cqb;
-    padding: 5px;
     margin: 0px;
     text-decoration: none;
 }
 
 .drivers-table {
     color: white;
-    margin: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .driver-table-head {
-    letter-spacing: 1px;
+    font-size: 16px;
 }
 
-.drivers-table-body {
-    background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
+.driver-table-body {
+    font-size: 16px;
 }
+
 
 .position {
     text-align: center;
-    width: 5px;
     border-right: solid 0.1px;
     border-left: solid 0.1px;
 }
@@ -60,8 +56,13 @@
     border-left: solid 0.1px;
 }
 
+.points {
+    border-right: solid 1px;
+}
+
 .wins {
     border-right: solid 1px;
+    width: 1px;
 }
 
 select {
@@ -69,4 +70,47 @@ select {
     color: white;
     max-height: 30px;
     border-radius: 1cqb;
+}
+
+@media screen and (max-width: 600px) {
+    .standings-select-container {
+        font-size: 14px;
+    }
+
+    .driver-table-head {
+        font-size: 12px;
+    }
+    
+    .driver-table-body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .standings-select-container {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .driver-table-head {
+        font-size: 10px;
+    }
+    
+    .driver-table-body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .standings-select-container {
+        font-size: 11px;
+    }
+
+    .driver-table-head {
+        font-size: 9px;
+    }
+    
+    .driver-table-body {
+        font-size: 9px;
+    }
 }

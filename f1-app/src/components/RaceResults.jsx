@@ -117,11 +117,11 @@ function RaceResults() {
                     <thead className="race-results-table-head">
                         <tr>
                             <th className="text-center">Pos</th>
-                            <th className="text-center">Driver</th>
-                            <th className="text-center">Constructor</th>
-                            <th className="text-center">Laps</th>
+                            <th className="text-left">Driver</th>
+                            <th className="text-left">Constructor</th>
+                            <th className="text-center laps">Laps</th>
                             <th className="text-center">Grid</th>
-                            <th className="text-center">Status</th>
+                            <th className="text-center status">Status</th>
                             <th className="text-center">Points</th>
                         </tr>
                     </thead>
