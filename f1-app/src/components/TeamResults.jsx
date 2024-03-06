@@ -109,24 +109,27 @@ function TeamResults() {
                 <table className="table text-white team-results-table">
                     <thead className="team-results-table-head">
                         <tr>
-                            <th className="text-center">Race</th>
-                            <th className="text-center">Driver 1</th>
-                            <th className="text-center">Position</th>
-                            <th className="text-center">Points</th>
-                            <th className="text-center">Driver 2</th>
-                            <th className="text-center">Position</th>
-                            <th className="text-center">Points</th>
+                            <th colSpan="1" className="text-left">Race</th>
+                            <th colSpan="2" className="text-left">Driver (1)</th>
+                            <th colSpan="1" className='text-center grid-position'>Grid</th>
+                            <th className="text-center driver-position">Pos</th>
+                            <th className="text-center team-points">Points</th>
+                            <th colSpan="2" className="text-left">Driver (2)</th>
+                            <th colSpan="1" className='text-center grid-position'>Grid</th>
+                            <th className="text-center driver-position">Pos</th>
+                            <th className="text-center team-points">Points</th>
                         </tr>
                     </thead>
                     <tbody className="team-results-table-body">
                         {teamResultsData.map((race, index) => (
                             <tr key={race.round}>
-                                <td className="result-grid race-list text-left">{race.raceName}<img src={raceFlag[index]} className="race-flag-result" alt="race-flag"></img></td>
+                                <td colSpan="1" className="result-grid race-list text-left"><img src={raceFlag[index]} className="race-flag-result" alt="race-flag"></img></td>
                                 {race.Results.map((result) => (
                                     <React.Fragment key={result.Driver.driverId}>
-                                        <td className="result-grid text-center driver">{`${result.Driver.givenName} ${result.Driver.familyName}`}</td>
+                                        <td colSpan="2" className="result-grid text-left driver">{`${result.Driver.givenName} ${result.Driver.familyName}`}</td>
+                                        <td className="result-grid text-center grid-position">{`${result.grid}`}</td>
                                         <td className="result-grid text-center position" style={{ backgroundColor: getPositionColor(result.position) }}>{result.position}</td>
-                                        <td className="result-grid text-center points">{result.points}</td>
+                                        <td className="result-grid text-center team-points points">{result.points}</td>
                                     </React.Fragment>
                                 ))}
                             </tr>

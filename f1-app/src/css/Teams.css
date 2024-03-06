@@ -77,10 +77,17 @@ select {
     }
 }
 
+@media screen and (max-width: 390px) {
+    .team-select-container {
+        padding: 15px;
+        font-size: 11px;
+    }
+}
+
 @media screen and (max-width: 361px) {
     .team-select-container {
         padding: 15px;
-        font-size: 1px;
+        font-size: 10px;
     }
 
     .team-profile {

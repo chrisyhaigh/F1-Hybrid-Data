@@ -48,9 +48,11 @@
     font-size: 16px;
 }
 
+
 .race-results-table-body {
     font-weight: 300;
 }
+
 
 .position {
     text-align: center;
@@ -71,6 +73,13 @@
 .status {
     width: 150px;
 }
+
+.cell-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
 
 @media screen and (max-width: 775px) {
     .race-results-table {
@@ -125,7 +134,7 @@
 
 @media screen and (max-width: 460px) {
     .race-results-table {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .status, .laps {

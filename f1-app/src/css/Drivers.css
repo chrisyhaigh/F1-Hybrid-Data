@@ -137,7 +137,7 @@ select {
     .drivers-select-container {
         display: flex;
         justify-content: space-around;
-        padding: 10px;
+        padding: 12px;
         font-size: 12px;
     }
 
@@ -159,7 +159,7 @@ select {
     }
 
     .driver-name {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .driver-info {

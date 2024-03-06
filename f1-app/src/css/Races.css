@@ -132,13 +132,13 @@
 
 @media screen and (max-width: 430px) {
   .select-container {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .race-box-container {
     width: 160px;
     height: 110px;
-    margin: 8px;
+    margin: 10px;
   }
 
   .race-round {
@@ -169,10 +169,3 @@
 
 }
 
-@media screen and (max-width: 430px) {
-  .select-container {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-}

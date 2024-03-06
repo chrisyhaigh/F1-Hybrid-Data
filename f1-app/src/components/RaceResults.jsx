@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import '../css/RaceResults.css';
 
+
 function RaceResults() {
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 2014 }, (_, index) => 2014 + index).reverse();
