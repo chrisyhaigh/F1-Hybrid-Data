@@ -29,6 +29,10 @@
     margin-left: 0px;
 }
 
+.position {
+    border-right: none;
+}
+
 select {
     background-color: rgb(31, 31, 31);
     color: white;

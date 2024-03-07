@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import '../css/DriverStandings.css';
+import SpinnerLoader from "./SpinnerLoader";
 
 function DriverStandings() {
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 2014}, (_, index) => 2014 + index).reverse();
 
-    const [selectedSeason, setSelectedSeason] = useState('2023');
-    const [standingsData, setStandingsData] = useState(null);
+    const [ selectedSeason, setSelectedSeason ] = useState('2023');
+    const [ standingsData, setStandingsData ] = useState(null);
+    const [ isLoading, setIsLoading ] = useState(true);
 
     useEffect(() => {
         const fetchDriverStandings = async () => {
             if (selectedSeason) {
                 try {
+                    setIsLoading(true);
                     const response = await fetch(`http://localhost/F1-Hybrid-Data/f1-app/api/getDriverStandings.php?season=${selectedSeason}`);
 
                     if (!response.ok) {
@@ -23,9 +26,11 @@ function DriverStandings() {
                     console.log('Driver Standings:', data);
 
                     setStandingsData(data.data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
-
+                    setIsLoading(false);
                 } catch (error) {
                     console.log('Unable to fetch driver standings', error);
+                } finally {
+                    setIsLoading(false);
                 }
             }
         };
@@ -52,6 +57,7 @@ function DriverStandings() {
             'Manor Marussia': '#6E0000',
             'Marussia': '#6E0000',
             'Lotus': '#FFB800',
+            'Lotus F1': '#FFB800',
             'Toro Rosso': '#0005C1',
             'Sauber': '#0063FF'
         }
@@ -84,7 +90,8 @@ function DriverStandings() {
             <div className="standings-select-container">
                 <p>Choose a season from the list to view the driver standings in that specific season:</p>
                 <select onChange={(e) => setSelectedSeason(e.target.value)}>
-                    <option value="">Season</option>
+                    {isLoading && <SpinnerLoader />}
+                    <option value="">{selectedSeason}</option>
                     {years.map((year) => (
                         <option key={year} value={year}>
                             {year}
@@ -92,8 +99,9 @@ function DriverStandings() {
                     ))}
                 </select>
             </div>
+            {isLoading ? <SpinnerLoader /> : null}
             <div className="standings-table-container">
-            {standingsData && (
+            {!isLoading && standingsData && (
                 <table className="table drivers-table">
                     <thead className="driver-table-head">
                         <tr>

@@ -15,7 +15,9 @@
 }
 
 .team-results-table-container {
-    padding: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 20px;
 }
 
 .select-container {
@@ -61,6 +63,12 @@
 }
 
 @media screen and (max-width: 750px) {
+    .team-results-table-container {
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 20px;
+    }
+
     .team-results-table {
         font-size: 11px;
 
@@ -70,13 +78,13 @@
         display: none;
     }
 
-    .position {
-        border-right: 1px solid white;
-    }
-
 }
 
 @media screen and (max-width: 465px) {
+    .team-results-heading {
+        font-size: 22px;
+    }
+
     .grid-position {
         display: none;
     }
@@ -85,4 +93,16 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 380px) {
+    .team-results-heading {
+        font-size: 20px;
+    }
+
+    .team-results-table-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
 }

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import '../css/RaceResults.css';
-
+import SpinnerLoader from "./SpinnerLoader";
 
 function RaceResults() {
     const currentYear = new Date().getFullYear();
@@ -13,6 +13,7 @@ function RaceResults() {
     const [ selectedRace, setSelectedRace ] = useState('');
     const [ raceData, setRaceData ] = useState(null);
     const [ raceFlag, setRaceFlag ] = useState('');
+    const [ isLoading, setIsLoading ] = useState(true);
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
@@ -53,13 +54,13 @@ function RaceResults() {
                     setRaceData(data.data.MRData.RaceTable.Races);
                 } catch (error) {
                     console.log('Error fetching race results: ', error);
+                } finally {
+                    setIsLoading(false);
                 }
             }
         };
         fetchRaceResults();
     }, [round, queryParams]);
-
-    {/*insert getRaceColours function*/}
 
     const getTeamColour = (teamName) => {
 
@@ -113,6 +114,7 @@ function RaceResults() {
                 </Link>
             </div>
             <div className="line"></div>
+            {isLoading && <SpinnerLoader />}
             <div className="race-results-table-container">
                 <table className="table text-white race-results-table">
                     <thead className="race-results-table-head">

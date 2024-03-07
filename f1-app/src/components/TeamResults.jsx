@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { Link, useLocation } from 'react-router-dom';
+import SpinnerLoader from './SpinnerLoader';
 import '../css/TeamResults.css';
 
 function TeamResults() {
@@ -9,10 +10,12 @@ function TeamResults() {
     const [ raceFlag, setRaceFlag ] = useState([]);
     const [ seasonFromParams, setSeasonFromParams ] = useState('');
 
+
     const location = useLocation();
 
     const queryParams = new URLSearchParams(location.search);
     const constructor = decodeURIComponent(queryParams.get('constructor'));
+    const [ isLoading, setIsLoading ] = useState(true); 
     
     useEffect(() => {
         const fetchConstructorResults = async () => {
@@ -61,6 +64,8 @@ function TeamResults() {
                 setSeasonFromParams(seasonFromParams);
             } catch (error) {
                 console.error('Error Fetching Constructor results:', error);
+            } finally {
+                setIsLoading(false);
             }
         };
 
@@ -96,6 +101,7 @@ function TeamResults() {
     return (
         <div className="team-results-container">
             <Navbar />
+            {isLoading && <SpinnerLoader />}
             <div className="team-results-heading-container">
                 <h3 className="team-results-heading">
                     {selectedTeam} Results {seasonFromParams}

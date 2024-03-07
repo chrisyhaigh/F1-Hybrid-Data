@@ -2,18 +2,21 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { Link } from 'react-router-dom'
 import '../css/Races.css';
+import SpinnerLoader from "./SpinnerLoader";
 
 function Races() {
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 2014 }, (_, index) => 2014 + index).reverse();
 
-  const [selectedSeason, setSelectedSeason] = useState('2023');
-  const [raceData, setRaceData] = useState(null);
+  const [ selectedSeason, setSelectedSeason ] = useState('2023');
+  const [ raceData, setRaceData ] = useState(null);
+  const [ isLoading, setIsLoading ] = useState(true);
 
   useEffect(() => {
     const fetchRaceData = async () => {
       if (selectedSeason) {
         try {
+          setIsLoading(true);
           const response = await fetch(`http://localhost/F1-Hybrid-Data/f1-app/api/getRaces.php?season=${selectedSeason}`);
 
           if (!response.ok) {
@@ -45,6 +48,8 @@ function Races() {
 
         } catch (error) {
           console.log('Error fetching race data: ', error);
+        } finally {
+          setIsLoading(false);
         }
       }
     };
@@ -63,7 +68,7 @@ function Races() {
         <div className="select-container">
           <p className="select-font">Choose a season from the select menu to display the race history for that particular year:</p>
           <select onChange={(e) => setSelectedSeason(e.target.value)}>
-            <option value="">Season</option>
+            <option value="">{selectedSeason}</option>
             {years.map((year) => (
               <option key={year} value={year}>
                 {year}
@@ -71,6 +76,7 @@ function Races() {
             ))}
           </select>
         </div>
+        {isLoading && <SpinnerLoader />}
         <div className="race-list-container">
           {raceData?.map((race) => (
             <Link to={`/raceresults?season=${selectedSeason}&round=${race.round}`} 

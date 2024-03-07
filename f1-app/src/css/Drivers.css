@@ -14,6 +14,10 @@
     background-color: rgb(21, 21, 21);
 }
 
+.page-heading-image {
+    margin-top: -5px;
+    height: auto;
+}
 
 .drivers-select-container {
     display: flex;

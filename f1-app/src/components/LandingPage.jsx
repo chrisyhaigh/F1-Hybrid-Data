@@ -1,7 +1,12 @@
 import React from 'react'
+import { useState } from 'react';
 import '../css/LandingPage.css'
+import SpinnerLoader from './SpinnerLoader'
 
 const LandingPage = ({ onEnterClick }) => {
+    const [ isLoading, setIsLoading ] = useState(true);
+
+
     return (
         <div className='Landing-container'> 
             <div className='image-container'>

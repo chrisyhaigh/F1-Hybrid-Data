@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import SpinnerLoader from './SpinnerLoader';
 import '../css/DriverResults.css';
 import Helmet from '../images/helmetpng.png'
 import Aitken from '../driver-images/aitken.png'
@@ -66,6 +67,7 @@ function DriverResults() {
     const [ driverResultsData, setDriverResultsData ] = useState([]);
     const [ raceFlag, setRaceFlag ] = useState([]);
     const [ seasonFromParams, setSeasonFromParams ] = useState('');
+    const [ isLoading, setIsLoading ] = useState(true);
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
@@ -108,7 +110,8 @@ function DriverResults() {
         
         
                     setRaceFlag(racesWithFlags);
-        
+                    setIsLoading(false);
+
                     const driverResults = races.flatMap(race => {
                         const raceResults = race.Results.map(result => ({
                             ...result,
@@ -274,16 +277,17 @@ function DriverResults() {
             case 'Guanyu Zhou':
                 return Zhou;
             default:
-                return Helmet;
+                return '';
         }
     };
 
     return (
         <div className='driver-results-container'>
             <Navbar />
+            {isLoading && <SpinnerLoader />}
             <div className='driver-results-heading-container'>
                 <h3 className='driver-results-heading'>{selectedDriver} Results {seasonFromParams}
-                <img className="results-driver-image" src={getDriverImage(`${selectedDriver}`)} alt="Driver"></img>
+                <img className="results-driver-image" src={getDriverImage(`${selectedDriver}`)} alt=""></img>
                 </h3>
                 <Link to="/drivers">
                     <button className="button back-button">&larr;</button>

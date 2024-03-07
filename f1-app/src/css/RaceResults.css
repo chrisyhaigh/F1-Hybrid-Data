@@ -57,7 +57,7 @@
 .position {
     text-align: center;
     width: 1px;
-    border-right: solid 0px;
+    border-right: none;
     border-left: solid 0.1px;
 }
 

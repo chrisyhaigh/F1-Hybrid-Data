@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/Home.css'
 import Helmet from '../images/helmetpng.png'
-import Lotus from '../images/lotus.png'
+import LotusCar from '../images/lotus.png'
 import Trophy from '../images/trophypng.png'
 import CheqFlag from '../images/cheqflag.png'
 import TeamTrophy from '../images/constructortrophy.png'
@@ -24,7 +24,7 @@ function Home() {
                     </Link>
                     <Link to='/teams' className="component-container">
                         <div className="comp-img-container">
-                            <img src={Lotus} alt="Lotus F1 Car" className="lotus" width='224'></img>
+                            <img src={LotusCar} alt="Lotus F1 Car" className="lotus" width='224'></img>
                         </div>
                         <h3 className="text-center">Teams</h3>
                     </Link>
