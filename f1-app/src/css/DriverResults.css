@@ -1,5 +1,7 @@
 .driver-results-container {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: rgb(17, 17, 17);
     color: white;
     height: 100vh;
@@ -9,19 +11,20 @@
 .driver-results-heading-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 12px;
-    padding-left: 14px;
-    background-color: rgb(21, 21, 21);
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: rgb(131, 2, 2);
 }
+
 
 .driver-results-table-container {
     padding-top: 20px;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .results-driver-image {
-    width: 80px;
+    width: 70px;
     height: auto;
     margin-top: -10px;
     margin-bottom: -7px;
@@ -29,6 +32,7 @@
 }
 
 .back-button {
+    margin-top: 10px;
     margin-right: 10px;
     width: 50px;
     background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
@@ -64,6 +68,10 @@
     height: 2px;
 }
 
+.driver-race-position {
+    width: 1px;
+}
+
 .points {
     width: 2px;
 }
@@ -90,7 +98,7 @@
     }
 }
 
-@media screen and (max-width: 702px) {
+@media screen and (max-width: 756px) {
     .driver-results-table-container {
         padding-left: 25px;
         padding-right: 25px;
@@ -115,8 +123,8 @@
 
 @media screen and (max-width: 560px) {
     .driver-results-table-container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 75px;
+        padding-right: 75px;
     }
 
     .driver-results-table {
@@ -137,10 +145,10 @@
 }
 
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 490px) {
     .driver-results-table-container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .driver-results-heading {
@@ -166,6 +174,11 @@
 }
 
 @media screen and (max-width: 400px) {
+    .driver-results-table-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .driver-results-heading {
         font-size: 14px;
     }

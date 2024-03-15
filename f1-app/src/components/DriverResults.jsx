@@ -73,7 +73,6 @@ function DriverResults() {
     const queryParams = new URLSearchParams(location.search);
     const driver = queryParams.get('driver');
 
-
     useEffect(() => {
         const fetchDriverResults = async () => {
             const seasonFromParams = queryParams.get('season');
@@ -316,7 +315,7 @@ function DriverResults() {
                                     {result.raceName} <img src={raceFlag[resultIndex]} className="race-flag-result" alt="Flag" />
                                 </td>
                                 <td className='result-grid text-center grid'>{result.grid}</td>
-                                <td className='result-grid text-center position' style={{ backgroundColor: getPositionColor(result.position)} }>{result.position}</td>
+                                <td className='result-grid text-center driver-race-position' style={{ backgroundColor: getPositionColor(result.position)} }>{result.position}</td>
                                 <td className='result-grid text-center laps'>{result.laps}</td>
                                 <td className='result-grid text-center status'>{result.status}</td>
                                 <td className='result-grid text-center points'>{result.points}</td>

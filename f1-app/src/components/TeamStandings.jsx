@@ -109,7 +109,7 @@ function TeamStandings() {
                         <tbody className="constructors-table-body">
                             {standingsData.map((constructor, index) => (
                                 <tr key={constructor.constructorId || index}>
-                                    <td className="position" style={{ background: getPositionColor(constructor.position) }}>{constructor.position}</td>
+                                    <td className="constructor-standing-position" style={{ background: getPositionColor(constructor.position) }}>{constructor.position}</td>
                                     <td className="constructor" style={{ background: `linear-gradient(200deg, ${getTeamColour(constructor.Constructor.name)}, rgb(17, 17, 17) 70%)` }}>{constructor.Constructor.name}</td>
                                     <td className="points text-center">{constructor.points}</td>
                                     <td className="wins text-center">{constructor.wins}</td>

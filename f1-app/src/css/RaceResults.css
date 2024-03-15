@@ -1,5 +1,7 @@
 .race-results-container {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: rgb(17, 17, 17);
     color: white;
     height: 100vh;
@@ -11,11 +13,13 @@
     justify-content: space-between;
     padding-top: 10px;
     padding-left: 14px;
-    background-color: rgb(21, 21, 21);
+    background-color: rgb(131, 2, 2);
 }
 
 .race-results-table-container {
-    padding: 15px;
+    padding-top: 25px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .line {
@@ -26,20 +30,22 @@
 
 .race-flag {
     width: 50px;
-    height: 31px;
+    height: auto;
+    margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 8px;
     border-radius: 0.5cqb;
 }
 
 .back-button {
+    margin-top: 5px;
     margin-right: 10px;
     width: 50px;
     background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 0.5cqb;
+    border-radius: 1.5cqb;
     border-top: white solid 0.5px;
     border-left: white solid 0.5px;
 }
@@ -54,16 +60,20 @@
 }
 
 
-.position {
+.race-position {
     text-align: center;
     width: 1px;
-    border-right: none;
     border-left: solid 0.1px;
+    border-right: none;
 }
 
 .race-grid {
     border-right: solid 0.1px;
     border-left: solid 0.1px;
+}
+
+.race-driver {
+    border-left: none;
 }
 
 .laps, .grid {
@@ -80,14 +90,42 @@
     justify-content: center; 
 }
 
+@media screen and (max-width: 955px) {
+    .race-results-table-container {
+        padding-top: 25px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .race-results-table-container {
+        padding-top: 25px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
 
 @media screen and (max-width: 775px) {
+    .race-results-table-container {
+        padding-top: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .race-results-table {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 660px) {
+    .back-button {
+        margin-top: 5px;
+        margin-right: 10px;
+        width: 40px;
+    }
+
 
     .race-results-table {
         font-size: 12px;
@@ -99,8 +137,16 @@
 }
 
 @media screen and (max-width: 580px) {
+    .race-results-heading-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 6px;
+        padding-left: 14px;
+        background-color: rgb(131, 2, 2);
+    }
+
     .race-results-heading {
-        font-size: 16px;
+        font-size: 21px;
     }
 
     .race-flag {
@@ -133,6 +179,12 @@
 }
 
 @media screen and (max-width: 460px) {
+    .race-results-table-container {
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
     .race-results-table {
         font-size: 11px;
     }

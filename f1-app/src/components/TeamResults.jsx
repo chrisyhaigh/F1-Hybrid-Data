@@ -134,7 +134,7 @@ function TeamResults() {
                                     <React.Fragment key={result.Driver.driverId}>
                                         <td colSpan="2" className="result-grid text-left driver">{`${result.Driver.givenName} ${result.Driver.familyName}`}</td>
                                         <td className="result-grid text-center grid-position">{`${result.grid}`}</td>
-                                        <td className="result-grid text-center position" style={{ backgroundColor: getPositionColor(result.position) }}>{result.position}</td>
+                                        <td className="result-grid text-center driver-position" style={{ backgroundColor: getPositionColor(result.position) }}>{result.position}</td>
                                         <td className="result-grid text-center team-points points">{result.points}</td>
                                     </React.Fragment>
                                 ))}

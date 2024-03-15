@@ -26,7 +26,6 @@ function DriverStandings() {
                     console.log('Driver Standings:', data);
 
                     setStandingsData(data.data.MRData.StandingsTable.StandingsLists[0].DriverStandings);
-                    setIsLoading(false);
                 } catch (error) {
                     console.log('Unable to fetch driver standings', error);
                 } finally {
@@ -100,7 +99,7 @@ function DriverStandings() {
                 </select>
             </div>
             {isLoading ? <SpinnerLoader /> : null}
-            <div className="standings-table-container">
+            <div className="driver-standings-table-container">
             {!isLoading && standingsData && (
                 <table className="table drivers-table">
                     <thead className="driver-table-head">
@@ -115,7 +114,7 @@ function DriverStandings() {
                     <tbody className="driver-table-body">
                         {standingsData.map((driver, index) => (
                             <tr scope="row" key={driver.Driver.driverId || index}>
-                                <td className="position" style={{ backgroundColor: getPositionColor(driver.position) }}>{driver.position}</td>
+                                <td className="driver-standing-position" style={{ backgroundColor: getPositionColor(driver.position) }}>{driver.position}</td>
                                 <td colSpan="2">{driver.Driver.givenName} {driver.Driver.familyName}</td>
                                 <td className="constructor text-white" style={{ background: `linear-gradient(200deg, ${getTeamColour(driver.Constructors[0].name)}, rgb(17, 17, 17) 60%)` }}>{driver.Constructors[0].name}</td>
                                 <td className="points text-center">{driver.points}</td>

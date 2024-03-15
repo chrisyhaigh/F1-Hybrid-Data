@@ -1,5 +1,7 @@
 .main-container {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: rgb(17, 17, 17);
     color: white;
     height: 100vh;
@@ -7,7 +9,6 @@
 
 .home-container {
     display: flex;
-    font-family: 'Lexend', sans-serif;
     justify-content: center;
     flex-wrap: wrap;
     padding: 5px;
@@ -94,7 +95,7 @@
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 366px) {
     .component-container {
         width: 125px;
         height: 125px;

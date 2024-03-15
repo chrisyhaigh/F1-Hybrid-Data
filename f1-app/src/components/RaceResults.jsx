@@ -132,8 +132,8 @@ function RaceResults() {
                         {raceData && raceData.map((race, raceIndex) => (
                             race.Results.map((result, resultIndex) => (
                                 <tr key={`${raceIndex}-${resultIndex}`}>
-                                    <td className="race-grid position text-center" style={{ backgroundColor: getPositionColor(result.position) }}>{result.position}</td>
-                                    <td className="race-grid driver text-left">{result.Driver.givenName} {result.Driver.familyName}</td>
+                                    <td className="race-grid race-position text-center" style={{ backgroundColor: getPositionColor(result.position) }}>{result.position}</td>
+                                    <td className="race-grid race-driver text-left">{result.Driver.givenName} {result.Driver.familyName}</td>
                                     <td className="race-grid constructor text-left" style={{ background:  `linear-gradient(200deg, ${getTeamColour(result.Constructor.name)}, rgb(17, 17, 17) 70%)` }}>{result.Constructor.name}</td>
                                     <td className="race-grid laps text-center">{result.laps}</td>
                                     <td className="race-grid grid text-center">{result.grid}</td>

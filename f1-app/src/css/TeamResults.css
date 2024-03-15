@@ -1,5 +1,7 @@
 .team-results-container {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: rgb(17, 17, 17);
     color: white;
     height: 100vh;
@@ -9,14 +11,14 @@
 .team-results-heading-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 7px;
+    padding-top: 12px;
     padding-left: 14px;
-    background-color: rgb(21, 21, 21);
+    background-color: rgb(131, 2, 2);
 }
 
 .team-results-table-container {
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 85px;
+    padding-right: 85px;
     padding-top: 20px;
 }
 
@@ -27,13 +29,11 @@
 }
 
 .back-button {
-    margin: 1px 10px 5px 0px;
-    width: 50px;
+    margin: 0px 15px 7px 0px;
     background: linear-gradient(220deg, rgba(41, 41, 41), rgba(41,21, 21));
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 1cqb;
     border-top: white solid 0.5px;
     border-left: white solid 0.5px;
 }
@@ -48,6 +48,17 @@
     height: 2px;
 }
 
+.driver-position {
+    width: 1px;
+}
+
+.grid-position {
+    width: 1px;
+}
+
+.team-points {
+    width: 1px;
+}
 
 
 @media screen and (max-width: 970px) {
@@ -100,9 +111,5 @@
         font-size: 20px;
     }
 
-    .team-results-table-container {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 20px;
-    }
+
 }

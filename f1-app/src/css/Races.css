@@ -1,5 +1,7 @@
 .races-container {
-    font-family: 'Lexend', sans-serif;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: rgb(17, 17, 17);
     color: white;
     overflow: overlay;
@@ -12,7 +14,7 @@
     justify-content: left;
     padding-top: 7px;
     padding-left: 10px;
-    background-color: rgb(21, 21, 21);
+    background-color: rgb(131, 2, 2);
   }
   
   .select-container {

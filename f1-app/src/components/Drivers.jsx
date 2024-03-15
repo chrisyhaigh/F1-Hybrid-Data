@@ -76,6 +76,7 @@ function Drivers() {
         const fetchDrivers = async () => {
             if (selectedSeason) {
                 try {
+                    setIsLoading(true);
                     const response = await fetch(`http://localhost/F1-Hybrid-Data/f1-app/api/getDrivers.php?season=${selectedSeason}`);
 
                     if (!response.ok) {
@@ -88,6 +89,8 @@ function Drivers() {
                     console.log(data);
                 } catch (error) {
                     console.error('Error fetching drivers data: ', error);
+                } finally {
+                    setIsLoading(false);
                 }
             }
         };
